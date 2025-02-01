@@ -28,4 +28,14 @@ python process.py "https://yunyj.linyi.net/wechat/imgs?eg=90361&sid=227010001&ei
 ![P1](./asse/1.png)
 
 ## Source
-训练部分和数据爬虫部分源码将提交于2025.2.11
+Train训练代码:`train.ipynb`
+
+Data数据集(只考虑sharp数据,即应用文):
+
+  1. `Datar.py`(Python) or `Datar.js`(Nodejs) 爬取原始数据并切片 => #5.04GB
+  2. `DataBaseProcess.py` 切片数据处理
+  
+  + 图像转为灰度,此时每个像素值为1-255
+  + Trans 像素值以123为界划分为0或1
+  + 每8 * 4的矩形按位合并值
+  + Normalize 值除以2^64并转为float16 => #NormalFP16sharp.npy 1.48GB
