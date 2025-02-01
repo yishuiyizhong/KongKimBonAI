@@ -39,3 +39,5 @@ Data数据集(只考虑sharp数据,即应用文):
   + Trans 像素值以123为界划分为0或1
   + 每8 * 4的矩形按位合并值
   + Normalize 值除以2^64并转为float16 => #NormalFP16sharp.npy 1.48GB
+
+  数据集下载:[v0.0.1α](https://github.com/yishuiyizhong/KongKimBonAI/releases/tag/v0.0.1-alpha)
