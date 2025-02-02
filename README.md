@@ -41,3 +41,10 @@ Data数据集(只考虑sharp数据,即应用文):
   + Normalize 值除以2^64并转为float16 => #NormalFP16sharp.npy 1.48GB
 
   数据集下载:[v0.0.1α](https://github.com/yishuiyizhong/KongKimBonAI/releases/tag/v0.0.1-alpha)
+
+# Plug
+使用OneHot改进训练
+
+详见
++ Training Source `OneHot-train.ipynb`
++ Model `KungKimBonAI-OheHot.keras`
