@@ -1,6 +1,7 @@
 # Kung Kim Bon AI
 ## 现有功能
-+ 应用文打分
++ 应用文打分(Sharp)
++ 读后续写打分(Page1)
 
 ### 应用文打分
 ***注: 此处应用文指临沂市2023级普通高中学科素养水平监测试卷(英语学科2025.1)***
@@ -28,9 +29,9 @@ python process.py "https://yunyj.linyi.net/wechat/imgs?eg=90361&sid=227010001&ei
 ![P1](./asse/1.png)
 
 ## Source
-Train训练代码:`train.ipynb`
+Train训练代码:`train.ipynb` 与 `trainPage1.ipynb`
 
-Data数据集(只考虑sharp数据,即应用文):
+SharpData数据集(只考虑sharp数据,即应用文):
 
   1. `Datar.py`(Python) or `Datar.js`(Nodejs) 爬取原始数据并切片 => #5.04GB
   2. `DataBaseProcess.py` 切片数据处理
@@ -48,3 +49,4 @@ Data数据集(只考虑sharp数据,即应用文):
 详见
 + Training Source `OneHot-train.ipynb`
 + Model `KungKimBonAI-OheHot.keras`
+  `KungKimBonAIPage1.keras`
