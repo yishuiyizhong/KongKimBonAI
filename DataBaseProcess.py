@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 import os
+
 def trans(p):
     if(p>=123):
         return 0
@@ -12,10 +13,11 @@ def add(arr):
         yp+=trans(arr[it])<<(len(arr)-it-1)
     return yp
 
-for datanum in range(1):
+for datanum in range(0,30):
     t=os.listdir("sharp/")
     t.sort()
-    t=t[30000:]
+    t=t[datanum*1000:(datanum+1)*1000]
+    
     w=len(t)
     u=np.zeros([len(t),320,69], dtype = np.uint64)#(1105-1)/16=69,,(1283-3)/4=320
     ul=np.zeros([len(t)],dtype = np.uint8)
